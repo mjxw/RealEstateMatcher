@@ -1,6 +1,4 @@
-// Matthew Wu
-// HW 4 
-// TCSS 333
+
 
 #include "client.h"
 #include "house.h"

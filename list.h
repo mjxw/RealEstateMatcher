@@ -1,6 +1,4 @@
-// Matthew Wu
-// HW 4 
-// TCSS 333
+
 
 #ifndef list_h
 #define list_h

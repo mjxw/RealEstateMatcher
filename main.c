@@ -1,10 +1,4 @@
-// Matthew Wu
-// HW 4 
-// TCSS 333
 
-// EXTRA CREDIT: Added a price difference between client and house matches in the houseView file. 
-// I did this because I thought it would be important for a realtor to at least have the 
-// price difference handy to inform the client.
 
 #include <stdio.h>
 #include <string.h> 

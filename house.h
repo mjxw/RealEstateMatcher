@@ -1,6 +1,3 @@
-// Matthew Wu
-// HW 4 
-// TCSS 333
 
 #ifndef house_h
 #define house_h

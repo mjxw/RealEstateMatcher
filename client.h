@@ -1,6 +1,4 @@
-// Matthew Wu
-// HW 4 
-// TCSS 333
+
 
 #ifndef client_h
 #define client_h

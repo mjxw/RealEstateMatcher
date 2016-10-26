@@ -1,0 +1,6 @@
+// Matthew Wu
+// HW 4 
+// TCSS 333
+
+hw4: client.c list.c house.c main.c
+	gcc -w client.c list.c house.c main.c -I.

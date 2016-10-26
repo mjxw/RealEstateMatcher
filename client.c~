@@ -1,0 +1,86 @@
+// Matthew Wu
+// HW 4 
+// TCSS 333
+
+#include "client.h"
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+
+ClientType generateClient() {
+    ClientType cPtr = malloc(sizeof(struct client_type));
+    return cPtr;
+}
+
+void setClientID(char id[], ClientType client) {
+    strncpy(client -> id, id, strlen(id) -2);
+}
+
+void setClientName(char name[], ClientType client) {
+    long int length = strlen(name) - 2;
+    
+    strncpy(client -> address.name, name, length);
+}
+
+void setClientAddress(char address[], ClientType client) {
+    long int length = strlen(address) - 2;
+    
+    strncpy(client -> address.address, address, length);
+
+}
+
+void setClientLocation(char location[], ClientType client) {
+    long int length = strlen(location) - 2;
+    
+    strncpy(client -> address.location, location, length);
+}
+
+void setClientPhone(char phone[], ClientType client) {
+    long int length = 12; // get the proper amount of numbers for phone number (last entry) doesnt have /r/n?
+    
+    strncpy(client -> address.phone, phone, length);
+}
+
+char *getClientID(ClientType client) {
+    return client -> id;
+        
+}
+
+void setClientMinBed(char *minBed, ClientType client) {
+    long int bed;
+    bed = atoi(minBed);
+    client -> preference.minBed = bed;
+}
+
+void setClientMinBath(char *minBath, ClientType client) {
+    long int bath;
+    bath = atoi(minBath);
+    client -> preference.minBath = bath;
+}
+
+void setClientMinFootage(char *minFootage, ClientType client) {
+    long int footage;
+    footage = atoi(minFootage);
+    client -> preference.minFootage = footage;
+}
+
+void setClientMaxPrice(char *maxPrice, ClientType client) {
+    long int price;
+    price = atoi(maxPrice);
+    client -> preference.maxPrice = price;
+}
+
+void printClient(ClientType client) {
+    printf("ID: %s \n", client -> id);
+    printf("name: %s \n", client -> address.name);
+    printf("address: %s \n", client -> address.address);
+    printf("location: %s \n", client -> address.location);
+    printf("phone: %s \n", client -> address.phone);
+    printf("min bed: %li \n", client -> preference.minBed);
+    printf("min bath: %li \n", client -> preference.minBath);
+    printf("min sq footage: %li \n", client -> preference.minFootage);
+    printf("max price: %li \n" , client -> preference.maxPrice);
+    printf("\n");
+}
